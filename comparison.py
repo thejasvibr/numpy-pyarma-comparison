@@ -135,13 +135,13 @@ if __name__ == "__main__":
     start = time.perf_counter_ns()
     for i in range(1000):
         source_pos = pyarma_spwa_locn(array_geom_pya, d_pya, c=340)
-    print(f'time taken: {(time.perf_counter_ns()-start)/10**12}:pya')
+    print(f'time taken: {(time.perf_counter_ns()-start)/10**12} ms:pya')
     #print(f'source positions: {source_pos}')
     #%%
     start = time.perf_counter_ns()
     for i in range(1000):
         source_pos = numpy_spwa_locn(array_geom, d, c=340)
-    print(f'time taken: {(time.perf_counter_ns()-start)/10**12}: numpy')
+    print(f'time taken: {(time.perf_counter_ns()-start)/10**12} ms: numpy')
     
     #%%
     %load_ext line_profiler
